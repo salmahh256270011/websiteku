@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowCare | Skincare Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">GlowCare ✦</div>
+      <nav aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#dasar">Dasar Skincare</a>
+        <a href="#produk">Jenis Produk</a>
+        <a href="#konsultasi">Form Kulit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero" id="beranda">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">Simple skincare, healthy skin</div>
+          <h1>Rawat kulitmu,<br>mulai dari hal sederhana.</h1>
+          <p>GlowCare adalah panduan dasar untuk mengenal perawatan kulit, memilih produk sesuai kebutuhan, dan membangun rutinitas yang konsisten.</p>
+          <a class="button" href="#dasar">Mulai Kenali Skincare</a>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi botol skincare">
+          <div class="bottle">GlowCare<small>SKIN ESSENTIALS</small></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="dasar">
+      <div class="section-heading">
+        <h2>3 Langkah Dasar</h2>
+        <p>Rutinitas sederhana untuk memulai perawatan kulit.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🫧</div>
+          <h3>1. Cleanser</h3>
+          <p>Membersihkan kotoran, minyak, dan sisa produk dari wajah. Pilih pembersih yang terasa nyaman di kulit.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💧</div>
+          <h3>2. Moisturizer</h3>
+          <p>Membantu menjaga kelembapan kulit. Kulit berminyak juga tetap membutuhkan pelembap yang sesuai.</p>
+        </article>
+        <article class="card">
+          <div class="icon">☀️</div>
+          <h3>3. Sunscreen</h3>
+          <p>Gunakan tabir surya pada pagi/siang hari dan ulangi sesuai petunjuk produk, terutama saat beraktivitas di luar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="produk">
+      <div class="section-heading">
+        <h2>Kenali Jenis Produk</h2>
+        <p>Tabel ringkas fungsi produk skincare yang umum digunakan.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Produk</th><th>Fungsi</th><th>Waktu Umum</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cleanser</td><td>Membersihkan wajah</td><td>Pagi dan malam</td></tr>
+            <tr><td>Moisturizer</td><td>Menjaga kelembapan</td><td>Pagi dan malam</td></tr>
+            <tr><td>Sunscreen</td><td>Melindungi kulit dari sinar UV</td><td>Pagi/siang</td></tr>
+            <tr><td>Serum</td><td>Menargetkan kebutuhan kulit tertentu</td><td>Sesuai petunjuk produk</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tip"><strong>Catatan:</strong> Perkenalkan produk baru satu per satu dan lakukan uji tempel terlebih dahulu. Jika kulit mengalami iritasi berat atau berkelanjutan, hentikan pemakaian dan konsultasikan dengan tenaga kesehatan.</p>
+    </section>
+
+    <section class="form-section" id="konsultasi">
+      <div class="form-inner">
+        <div class="section-heading">
+          <h2>Kenali Kebutuhan Kulitmu</h2>
+          <p>Isi form berikut untuk mendapatkan saran rutinitas dasar.</p>
+        </div>
+        <form id="skinForm">
+          <div class="field">
+            <label for="nama">Nama</label>
+            <input id="nama" name="nama" type="text" placeholder="Masukkan nama" required>
+          </div>
+          <div class="field">
+            <label for="jenisKulit">Jenis kulit</label>
+            <select id="jenisKulit" name="jenisKulit" required>
+              <option value="">-- Pilih jenis kulit --</option>
+              <option value="berminyak">Berminyak</option>
+              <option value="kering">Kering</option>
+              <option value="kombinasi">Kombinasi</option>
+              <option value="normal">Normal</option>
+              <option value="sensitif">Sensitif / mudah iritasi</option>
+              <option value="belum tahu">Belum tahu</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="masalah">Hal yang ingin diperhatikan</label>
+            <select id="masalah" name="masalah">
+              <option>Menjaga kelembapan</option>
+              <option>Minyak berlebih</option>
+              <option>Jerawat</option>
+              <option>Kulit kusam</option>
+              <option>Belum yakin</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="catatan">Catatan (opsional)</label>
+            <textarea id="catatan" name="catatan" placeholder="Tuliskan kebutuhan atau pertanyaanmu..."></textarea>
+          </div>
+          <div class="field full">
+            <button class="button" type="submit">Lihat Saran Rutinitas</button>
+          </div>
+        </form>
+        <div id="hasil" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>GlowCare</strong> · Panduan dasar perawatan kulit<br>
+    <small>Informasi di halaman ini bersifat umum, bukan diagnosis medis.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

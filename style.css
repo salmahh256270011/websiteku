@@ -1,0 +1,242 @@
+/* Gaya utama website GlowCare */
+:root {
+  --green: #315b4c;
+  --sage: #dfe9df;
+  --cream: #faf8f2;
+  --text: #26352f;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--white);
+  border-bottom: 1px solid #e7e5dc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: var(--green);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+nav a:hover { color: #78977f; }
+
+.hero {
+  background: linear-gradient(115deg, #e5eee4 0%, #f8eee5 100%);
+  padding: 68px 22px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 38px;
+  flex-wrap: wrap;
+}
+
+.hero-copy { flex: 1 1 330px; }
+
+.eyebrow {
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.08;
+  margin: 12px 0 18px;
+  color: #244638;
+}
+
+.hero p { max-width: 540px; font-size: 1.05rem; }
+
+.button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button:hover { background: #244638; }
+
+.hero-art {
+  flex: 1 1 280px;
+  min-height: 280px;
+  border-radius: 48% 48% 18px 18px;
+  background: radial-gradient(circle at 65% 25%, #fff8ec 0 12%, transparent 13%),
+              linear-gradient(145deg, #b8cbb8, #e9c8b5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.bottle {
+  width: 130px;
+  height: 190px;
+  border-radius: 22px 22px 28px 28px;
+  background: linear-gradient(90deg, #f9f3e8, #fffdf8 48%, #e8dfcf);
+  box-shadow: 12px 18px 28px #526d5b40;
+  position: relative;
+  text-align: center;
+  padding-top: 62px;
+  color: var(--green);
+  font-weight: 800;
+  transform: rotate(-7deg);
+}
+
+.bottle::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 43px;
+  width: 44px;
+  height: 34px;
+  background: #315b4c;
+  border-radius: 6px 6px 2px 2px;
+}
+
+.bottle small { display: block; font-size: .68rem; letter-spacing: 2px; }
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 58px 22px;
+}
+
+.section-heading { text-align: center; margin-bottom: 28px; }
+.section-heading h2 { color: var(--green); font-size: 2rem; margin: 0 0 8px; }
+
+.cards { display: flex; flex-wrap: wrap; gap: 18px; }
+
+.card {
+  flex: 1 1 220px;
+  background: white;
+  border: 1px solid #e9e6dc;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 7px 22px #2e47300a;
+}
+
+.card .icon { font-size: 2rem; }
+.card h3 { color: var(--green); margin: 8px 0; }
+
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e3da;
+}
+
+table { width: 100%; border-collapse: collapse; min-width: 570px; }
+th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #e9e7df; }
+th { background: var(--green); color: white; }
+tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) { background: #f3f6f0; }
+
+.form-section { background: var(--sage); max-width: none; }
+.form-inner { max-width: 760px; margin: auto; }
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.field { flex: 1 1 250px; display: flex; flex-direction: column; gap: 6px; }
+label { font-weight: 700; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5cb;
+  border-radius: 7px;
+  font: inherit;
+  background: #fff;
+}
+
+textarea { resize: vertical; min-height: 90px; }
+.full { flex-basis: 100%; }
+
+#hasil {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 9px;
+  background: #fff;
+  display: none;
+}
+
+.tip {
+  background: #f5e8dd;
+  border-left: 5px solid #bc8b6c;
+  padding: 16px 18px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 18px;
+  background: #244638;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .navbar { justify-content: center; }
+  nav { justify-content: center; gap: 12px; }
+  .hero { padding-top: 45px; }
+  section { padding-top: 42px; padding-bottom: 42px; }
+}
